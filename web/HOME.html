@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASSIGNMENT 1-2</title>
+  <link rel="stylesheet" href="CSS/ex.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"> -->
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="logo">
+        <a href="HOME.html">
+        <img src="images/OX.png" alt="Oxford University" style="  width:70px;height:70px;border: 4px #ffffff solid;";>
+        </a>
+      </div>
+
+          <h1 class="header"> OXFORD UNIVERSITY</h1>
+
+    </div>
+        <nav>
+          <div class="menu">
+          <ul style="  padding: 0;margin: 0 0 0 150px;display: inline-flex;list-style: none;">
+             <li><a href="HOME.html" class ="active"><i class="fa fa-fw fa-home"></i>Home</a></li>
+             <li><div class="dropdown">
+               <a href="#">Admission</a>
+               <div class="dropdown-content">
+                 <a href="#">Undergraduate</a>
+                 <a href="#">Graduate</a>
+                 <a href="#">Continuining education</a>
+               </div>
+                </div>
+            </li>
+            <li><div class="dropdown">
+              <a href="#">Research</a>
+              <div class="dropdown-content">
+                <a href="#">Dividions</a>
+                <a href="#">Research impact </a>
+                <a href="#">Libraries</a>
+                <a href="#">Innovation and partnership</a>
+                <a href="#">Support for researchers</a>
+                <a href="#">Public Engagement with Research</a>
+              </div>
+               </div>
+           </li>
+           <li><div class="dropdown">
+             <a href="#">News</a>
+             <div class="dropdown-content">
+               <a href="#">Events</a>
+               <a href="sblog.html">Science Blog</a>
+               <a href="Director.html">Arts Blog</a>
+               <a href="effect.html">Oxford and Coronavirus</a>
+               <a href="#">News releases for journalists</a>
+               <a href="#">Filming in Oxford</a>
+               <a href="#">Find an Expert</a>
+             </div>
+              </div>
+          </li>
+          <li><div class="dropdown">
+            <a href="#" >About</a>
+            <div class="dropdown-content">
+              <a href="#">Organization</a>
+              <a href="#">Facts and figures</a>
+              <a href="#">Oxford people</a>
+              <a href="#">Oxford Access</a>
+              <a href="#">Jobs</a>
+            </div>
+             </div>
+         </li>
+           <li><div class="dropdown">
+             <a href="A" >All</a>
+             <div class="dropdown-content">
+               <a href="#">Colleges</a>
+               <a href="#">Oxford Students</a>
+               <a href="#">Local community</a>
+               <a href="#">Staff</a>
+               <a href="#">Alumni</a>
+             </div>
+           </div>
+          </li>
+           <li>
+            <div class="login">
+              <a href="login.html">Login</a>
+            </div>
+          </li>
+          <li>
+           <div class="dropdown">
+             <a href="signup.html">Sign UP</a>
+           </div>
+         </li>
+         </ul>
+         </div>
+
+        </nav>
+  </header>
+
+  <main>
+    <section>
+
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/building.jpg" alt="Oxford University" style="width:100%; height:550px;">
+          <div class="text">
+            <b>PROTECT OUR COMMUNITY. PROTECT THE VULNERABLE. PROTECT YOURSELF. </b>
+            <p style="font-size:20px;">Find out what we’re doing to help keep everyone safe this term</p>
+        </div>
+
+      </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/virtual.png" alt="Virtual" style="width:100%; height:550px;">
+          <div class="text" style="color: #111111;">
+            <b>MEET US ONLINE! OUR UNDERGRADUATE OPEN DAY IS ON 18 SEPTEMBER</b>
+            <p style="font-size:20px;">Meet staff and students, virtually tour colleges and departments, and find out what it’s really like to be a student here</p></div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/lib.JPEG" alt="Library" style="width: 100%;height: 550px;">
+          <div class="text">
+            <b>HOW TO CHOOSE A MASTER’S COURSE</b>
+          <p style="font-size:20px;">Make sure your course is a great fit for you with our advice on where to start</p> </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+
+      function showSlides(n)
+      {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+     }
+   </script>
+    </section>
+    <div id="sec1">
+      <h2> <b>NEWS</b></h2>
+    </div>
+    <div class="row">
+    <div  class="column">
+      <a  href="Director.html" >
+      <img alt="Inaugural director and academic team appointed to new Institute for Ethics in AI" src="images/John T LP.JPG">
+      <p>Inaugural director and academic team appointed to new Institute for Ethics in AI</p></a>
+    </div>
+
+    <div class="column">
+      <a href="sblog.html">
+      <img alt="Oxford coronavirus vaccine" src="images/vacc.JPG">
+      <p>New study reveals Oxford coronavirus vaccine produces strong immune response</p></a>
+    </div>
+
+    <div class="column">
+      <a href="effect.html">
+      <img alt="Long term Effects of COVID-19" src="images/global.JPG">
+      <p>Global consortium launches new study into long-term effects of COVID-19</p></a>
+    </div>
+
+  </div>
+</main>
+   <footer >
+      <div>
+            <p style="padding:2%;font-size: 25px;">CONNECT WITH US </p>
+           <ul class="social-icons" style="list-style-type:none;">
+
+             <li><a  href="https://www.ox.ac.uk/itunes-u"><i class=" fa fa-graduation-cap"></i></a></li>
+             <li><a  href="https://www.facebook.com/the.university.of.oxford"><i class="fa fa-facebook"></i></a></li>
+             <li><a  href="https://twitter.com/uniofoxford"><i class="fa fa-twitter"></i></a></li>
+             <li><a  href="https://www.youtube.com/c/oxforduniversity"><i class="fa fa-youtube-play"></i></a></li>
+             <li><a  href="https://www.linkedin.com/school/oxforduni/"><i class="fa fa-linkedin"></i></a></li>
+              <li><a  href="https://www.instagram.com/oxford_uni/"><i class="fa fa-instagram"></i></a></li>
+             <li><a  href="https://theconversation.com/institutions/university-of-oxford-1260"><i class="fa fa-comment-o"></i></a></li>
+           </ul>
+      </div>
+      <div id="foot"class="footer">
+             <p>Copyright &copy; 2020 All Rights Reserved by
+               University of Oxford.
+             </p>
+      </div>
+  </footer>
+</body>
+</html>
